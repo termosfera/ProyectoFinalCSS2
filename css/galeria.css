@@ -1,0 +1,7 @@
+#slideshow {
+	width: 80%;
+	margin-left: 10%;
+	position: absolute;
+	top: 160px;
+	z-index: 0;
+}

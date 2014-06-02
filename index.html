@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sushi Bar</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="./css/menu.css">
+		<!-- Nivo Slider plugin style -->
+		<link rel="stylesheet" href="./lib/nivo-slider/themes/default/default.css" type="text/css" media="screen">
+	    <!--<link rel="stylesheet" href="./lib/nivo-slider/themes/light/light.css" type="text/css" media="screen">
+	    <link rel="stylesheet" href="./lib/nivo-slider/themes/dark/dark.css" type="text/css" media="screen">
+	    <link rel="stylesheet" href="./lib/nivo-slider/themes/bar/bar.css" type="text/css" media="screen">-->
+	    <link rel="stylesheet" href="./lib/nivo-slider/nivo-slider.css" type="text/css" media="screen">
+	    <!-- End Nivo Slider plugin -->
+
+		<link rel="stylesheet" type="text/css" href="./css/galeria.css">
+		<link rel="stylesheet" type="text/css" href="./css/acordeon.css">
+		<style type="text/css"></style>
+	</head>
+<body>
+
+	<div id="main">	
+
+		<nav>
+			<ul>
+				<li><img id="logo" alt="logo" src="./img/letter-nav.png"></li>
+				<li><a href="">Home</a></li>
+				<li><a href="">Galeria</a></li>
+				<li><a href="">Contacto</a>
+					<ul>					
+						<li><a href="">Mapa</a></li>					
+						<li><a href="">Detalles</a></li>					
+						<li><a href="">Ubicacion</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="slideshow">
+
+			<div class="slider-wrapper theme-default">
+				<div id="slider" class="nivoSlider">
+					<img src="./img/1.jpg" alt="" title="#htmlcaption">
+					<img src="./img/2.jpg" alt="">
+					<img src="./img/3.jpg" alt="">
+					<img src="./img/4.jpg" alt="">
+				</div>
+			</div>
+			<div id="htmlcaption" class="nivo-html-caption">
+				<strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Nivo Slider plugin -->
+	<script type="text/javascript" src="./lib/nivo-slider/jquery.nivo.slider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#slider').nivoSlider({
+				prevText: 'Prev',
+				netxText: 'Next',
+			});
+			
+		});
+	</script>
+</body>
+</html>
