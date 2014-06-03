@@ -111,16 +111,23 @@
 
                 <div id="form-frame">
                     <form>
-                        <input type="text">
-                        <input type="text">
-                        <input type="submit">
+                        <input class="campo" type="text" placeholder="Nombre" required>
+                        <input class="campo" type="email" placeholder="@mail" required>
+                        <input class="campo" type="text" placeholder="Asunto" required>
+                        <textarea class="campo" required></textarea>
+                        <button class="boton" type="submit">Enviar</button>
                     </form>
                 </div>
 
             </section>
+            
+            <section id="mapa-section">
+                
+            </section>
 
         </article>
 
+        <!-- JQuery -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <!-- Nivo Slider plugin -->
         <script type="text/javascript" src="./lib/nivo-slider/jquery.nivo.slider.js"></script>
@@ -128,13 +135,14 @@
             $(document).ready(function() {
                 $('#slider').nivoSlider();
 
-                var sections = {1: "slideshow",
-                                2: "polaroid",
-                                3: "contacto",
-                                4: "mapa"
-                            };
+                var sections = {
+                    1: "slideshow",
+                    2: "polaroid",
+                    3: "contacto",
+                    4: "mapa"
+                };
 
-                hideSections("polaroid", sections);
+                hideSections("contacto", sections);
 
                 for (var i in sections) {
                     var $link = $("#" + sections[i] + "-link");
@@ -146,17 +154,18 @@
                 }
 
                 function hideSections(visibleSection, sectionsArray) {
+                    var section;
+                
                     for (var i in sectionsArray) {
-                        var $section = $("#" + sections[i] + "-section");
-                        var display;
+                        section = document.getElementById(sectionsArray[i] + "-section");
+                        console.log(section);
 
-                        if (sectionsArray[i] !== visibleSection) {
-                            display = "none";
-                        } else {
-                            display = "block";
-                        }
-                        $section.css("display", display);
+                        if (sectionsArray[i] !== visibleSection)
+                            section.style.display = "none";
+                        else
+                            section.style.display = "block";
                     }
+                    
                 }
 
             });

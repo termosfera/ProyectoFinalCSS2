@@ -19,5 +19,27 @@ and open the template in the editor.
 }
 
 #form-frame form {
-    display: none;
+    margin-top: 10%;
+}
+
+.campo, .boton {
+    display: block;
+    margin-left: 25%;
+}
+
+.campo {
+    width: 300px;
+    margin-top: 25px;
+}
+
+.campo:focus {
+    color:  #C3632D;
+}
+
+textarea {
+    height: 180px;
+}
+
+.boton {
+    margin-top: 25px;
 }
