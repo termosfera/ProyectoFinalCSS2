@@ -28,14 +28,14 @@
                 <li><a href="">Home</a></li>
                 <li><a href="">Galerias</a>
                     <ul>					
-                        <li><a id="link_slideshow" href="">Slideshow</a></li>					
-                        <li><a id="link_polaroid" href="">polaroid</a></li>	
+                        <li><a id="slideshow-link" href="">Slideshow</a></li>					
+                        <li><a id="polaroid-link" href="">polaroid</a></li>	
                     </ul>
                 </li>
                 <li><a href="">Contacto</a>
                     <ul>					
-                        <li><a id="link_contacto" href="">Contacto</a></li>					
-                        <li><a id="link_mapa" href="">Mapa</a></li>
+                        <li><a id="contacto-link" href="">Contacto</a></li>					
+                        <li><a id="mapa-link" href="">Mapa</a></li>
                     </ul>
                 </li>
                 <li><a href="">Faq</a></li>
@@ -127,25 +127,36 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#slider').nivoSlider();
-                
-                var sections = ["slideshow", "polaroid", "contacto", "mapa", "ubicacion"];
-                
+
+                var sections = {1: "slideshow",
+                                2: "polaroid",
+                                3: "contacto",
+                                4: "mapa"
+                            };
+
+                hideSections("polaroid", sections);
+
                 for (var i in sections) {
-                    var $section = $("#" + sections[i] + "-section");
-                    var $link = $("#link_" + sections[i]);
-                    
-                    if (sections[i] !== "polaroid") {
-                        $section.css("display", "none");
-                    }
-                    
+                    var $link = $("#" + sections[i] + "-link");
                     $link.click(function(e) {
                         e.preventDefault();
-                        var ref = this.id.slice(5);
-                        var clickedName = this.id.slice(5, this.id.length);
-                        console.log($(clickedName + "-section"));
+                        var clicked = this.id.slice(0, -5);
+                        hideSections(clicked, sections);
                     });
                 }
-                
+
+                function hideSections(visibleSection, sectionsArray) {
+                    for (var i in sectionsArray) {
+                        var $section = $("#" + sections[i] + "-section");
+
+                        if (sectionsArray[i] !== visibleSection) {
+                            $section.css("display", "none");
+                        } else {
+                            $section.css("display", "block");
+                        }
+                    }
+                }
+
             });
         </script>
 
