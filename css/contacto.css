@@ -13,7 +13,8 @@ and open the template in the editor.
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-image: url('./../img/optimized/letter.jpg');
+    background-repeat: no-repeat;
     border: 1px solid #888;
     box-shadow:2px 2px 2px #888 inset;
 }
@@ -29,11 +30,16 @@ and open the template in the editor.
 
 .campo {
     width: 300px;
+    font-size: 15px;
     margin-top: 25px;
 }
 
 .campo:focus {
     color:  #C3632D;
+}
+
+input {
+    height: 25px;
 }
 
 textarea {

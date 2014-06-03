@@ -142,18 +142,18 @@
                     4: "mapa"
                 };
 
-                hideSections("contacto", sections);
+                showSection("slideshow", sections);
 
                 for (var i in sections) {
                     var $link = $("#" + sections[i] + "-link");
                     $link.click(function(e) {
                         e.preventDefault();
                         var clicked = this.id.slice(0, -5);
-                        hideSections(clicked, sections);
+                        showSection(clicked, sections);
                     });
                 }
 
-                function hideSections(visibleSection, sectionsArray) {
+                function showSection(visibleSection, sectionsArray) {
                     var section;
                 
                     for (var i in sectionsArray) {
