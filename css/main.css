@@ -29,10 +29,12 @@ body {
 
 .text-frame {
     color: white;
-    width: 685px;
+    width: 675px;
     height: 200px;
+    text-align: center;
     padding: .5em;
-    
+    padding-right: 1em;
+    padding-left: 1em;
     margin-right: auto;
     margin-left: auto;
     background-color: black;
@@ -45,8 +47,16 @@ body {
     column-count: 3;*/
 }
 
+.text-frame hr {
+    width: 500px;
+}
+
 .text-frame h3 {
     color: #C3632D;
     text-align: center;
     font-size: 25px;
+}
+
+.text-frame p {
+    margin-top: 1.5em;
 }

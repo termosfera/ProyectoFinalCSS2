@@ -31,7 +31,8 @@ and open the template in the editor.
 .campo {
     width: 300px;
     font-size: 15px;
-    margin-top: 25px;
+    padding: .2em;
+    margin-top: 15px;
 }
 
 .campo:focus {
