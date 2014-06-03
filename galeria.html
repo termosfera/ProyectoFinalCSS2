@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" href="./css/menu.css">
+        <link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+        
+        <!-- Nivo Slider plugin style -->
+        <link rel="stylesheet" href="./lib/nivo-slider/themes/default/default.css" type="text/css" media="screen">
+        <!--<link rel="stylesheet" href="./lib/nivo-slider/themes/light/light.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./lib/nivo-slider/themes/dark/dark.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./lib/nivo-slider/themes/bar/bar.css" type="text/css" media="screen">-->
+        <link rel="stylesheet" href="./lib/nivo-slider/nivo-slider.css" type="text/css" media="screen">
+        <!-- End Nivo Slider plugin -->
+        
+    </head>
+    <body>
+        <div class="main">	
+
+            <nav class="menu">
+                <ul>
+                    <li><img id="logo" alt="logo" src="./img/letter-nav.png"></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+
+            <div id="slideshow">
+
+            
+
+        </div>
+            
+        </div>
+        
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!-- Nivo Slider plugin -->
+        <script type="text/javascript" src="./lib/nivo-slider/jquery.nivo.slider.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#slider').nivoSlider({
+                    prevText: 'Prev',
+                    netxText: 'Next',
+                });
+
+            });
+        </script>
+    </body>
+</html>

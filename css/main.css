@@ -1,18 +1,49 @@
+/* reset */
 body, header, article, nav, section, p, aside, div, ul, ol, li, a {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url('./../font/Ubuntu-M.ttf');
 }
 
 body {
-	background-color: #ececec;
+    font-family: ubuntu;
+    background-color: #ececec;
 }
 
-#main {
-	width: 80%;
-	height: 100%;
-	position: absolute;
-	left: 10%;
-	background-image: url('./../img/sushi-body3.jpg');
-	background-repeat: no-repeat;
-	box-shadow: 3px 3px 3px 3px #555;
+.main {
+    width: 1000px;
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('./../img/sushi-body3.jpg');
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 3px 3px #555;
+}
+
+.text-frame {
+    color: white;
+    width: 685px;
+    height: 200px;
+    padding: .5em;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    opacity: .7;
+
+/*    -webkit-column-count: 3;  Chrome, Safari, Opera 
+    -moz-column-count: 3;  Firefox 
+    column-count: 3;*/
+}
+
+.text-frame h3 {
+    color: #C3632D;
+    text-align: center;
+    font-size: 25px;
 }

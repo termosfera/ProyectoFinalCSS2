@@ -1,0 +1,67 @@
+#polaroid {
+    width: 700px;
+    height: 500px;
+    
+    
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+    
+    border: 1px solid black;
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    /*box-shadow: 3px 3px 3px #000;*/
+    background-image: url('./../img/letter2.jpg');
+    background-repeat: no-repeat;
+}
+
+.pic {
+    width: 300px;
+    height: 180px;
+    float: left;
+    background-color: white;
+    padding-top: 1.5em;
+    padding-right: .5em;
+    padding-left: .5em;
+    padding-bottom: .5em;
+    margin-top: 1em;
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 0px 0px 15px #000;
+    -webkit-box-shadow: 0px 0px 15px #000;
+    -moz-box-shadow: 0px 0px 15px #000;
+}
+
+.pic:hover {
+    z-index: 10;
+    -moz-box-shadow: 3px 5px 15px #333;
+    -webkit-box-shadow: 3px 5px 15px #333;
+}
+
+.one {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+
+.two {
+    margin-top: 25px;
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+}
+
+.three {
+    margin-top: -25px;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+}
+
+.four {
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+}
+
+.picture-text {
+    float: right;
+}

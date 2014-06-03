@@ -10,7 +10,8 @@
 }
 
 nav {
-    opacity: .7;
+    opacity: .8;
+    z-index: 20;
 }
 
 nav ul ul {
@@ -47,7 +48,6 @@ nav ul li a {
     padding: 1em 1em;
     color: #fff; 
     font-size: 18px;
-    font-family: sans-serif;
     text-decoration: none;
 }
 
@@ -59,14 +59,13 @@ nav ul ul {
     width: 200px;
     background: #000; 
     position: absolute; 
-    top: 95%;
+    top: 100%;
     z-index: 10;
 }
 
 nav ul ul li {
     float: none; 
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #575f6a;
     position: relative;
 }
 
