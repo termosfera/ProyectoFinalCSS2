@@ -148,12 +148,14 @@
                 function hideSections(visibleSection, sectionsArray) {
                     for (var i in sectionsArray) {
                         var $section = $("#" + sections[i] + "-section");
+                        var display;
 
                         if (sectionsArray[i] !== visibleSection) {
-                            $section.css("display", "none");
+                            display = "none";
                         } else {
-                            $section.css("display", "block");
+                            display = "block";
                         }
+                        $section.css("display", display);
                     }
                 }
 
