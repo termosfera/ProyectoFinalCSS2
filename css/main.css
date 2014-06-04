@@ -24,7 +24,7 @@ body {
     background-image: url('./../img/optimized/sushi-body.jpg');
     background-repeat: no-repeat;
     border-radius: 3px;
-    box-shadow: 3px 3px 3px 3px #555;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .text-frame {
