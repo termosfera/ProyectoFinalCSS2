@@ -79,13 +79,23 @@
 
                     <div class="slider-wrapper theme-default">
                         <div id="slider" class="nivoSlider">
-                            <img src="./img/1.jpg" alt="" title="#htmlcaption">
-                            <img src="./img/2.jpg" alt="">
-                            <img src="./img/3.jpg" alt="">
-                            <img src="./img/4.jpg" alt="">
+                            <img src="./img/1.jpg" alt="" title="#firstcaption">
+                            <img src="./img/2.jpg" alt="" title="#secondcaption">
+                            <img src="./img/3.jpg" alt="" title="#thirdcaption">
+                            <img src="./img/4.jpg" alt="" title="#fourthcaption">
                         </div>
                     </div>
-                    <div id="htmlcaption" class="nivo-html-caption">
+                    
+                    <div id="firstcaption" class="nivo-html-caption">
+                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                    </div>
+                    <div id="secondcaption" class="nivo-html-caption">
+                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                    </div>
+                    <div id="thirdcaption" class="nivo-html-caption">
+                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                    </div>
+                    <div id="fourthcaption" class="nivo-html-caption">
                         <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
                     </div>
 
@@ -109,7 +119,7 @@
                         <input class="campo" type="email" placeholder="Em@il" required>
                         <input class="campo" type="text" placeholder="Asunto" required>
                         <textarea class="campo" required></textarea>
-                        <button class="boton" type="submit">Enviar</button>
+                        <button class="boton" type="submit">Enviar - 送信</button>
                     </form>
                 </div>
 
@@ -200,7 +210,7 @@
 
                 var sections = ["slideshow", "polaroid", "contacto", "mapa", "faq"];
 
-                showSection("polaroid", sections);
+                showSection("contacto", sections);
 
                 for (var i in sections) {
                     var $link = $("#" + sections[i] + "-link");
