@@ -52,9 +52,9 @@ body {
 
 /* Estilo de enlaces */
 .text-frame a {
-    color: #C02416;    
+    color: #C3632D;    
 }
 
 .text-frame a:visited {
-    color: #C02416;
+    /*color: #C02416;*/
 }
