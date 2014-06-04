@@ -38,7 +38,7 @@
                         <li><a id="mapa-link" href="">Mapa</a></li>
                     </ul>
                 </li>
-                <li><a href="">Faq</a></li>
+                <li><a id="faq-link" href="">Faq</a></li>
             </ul>
         </nav>
 
@@ -119,6 +119,75 @@
 
             </section>
 
+            <section id="faq-section">
+
+                <div class="text-frame">
+                    <h3>Preguntas comunes</h3>
+                    <p>
+                        Estas son algunas de las dudas mas comunes entre nuestros
+                        clientes, si tiene alguna mas no dude en enviárnosla a
+                        nuestro formulario de <a href="">contacto.</a>
+                    </p>
+                </div>
+
+                <div id="acordeon">
+                    <ul>
+                        <li>
+                            <h3>¿Servimos comida a domicilio?</h3>
+                            <div class="acordeon-contenido">
+                                <p>
+                                    Por supuesto que si, llama al 678908543 y te
+                                    atenderemos lo antes posible para realizar tu
+                                    pedido.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>¿Se congela el pescado para prevenir anisakis?</h3>
+                            <div class="acordeon-contenido">
+                                <p>
+                                    Seguimos y cumplimos todos los estandares de
+                                    calidad y control, por lo que nuestros
+                                    clientes pueden estar tranquilos en ese aspecto.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>¿A donde llamo para reservar mesa?</h3>
+                            <div class="acordeon-contenido">
+                                <p>
+                                    Puedes reservar mesa con un mínimo de 1
+                                    semana de antelación al siguiente numero:
+                                    678908543.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>¿Que plato recomiendan?</h3>
+                            <div class="acordeon-contenido">
+                                <p>
+                                    Nuestro mejor plato es una combinación de varios
+                                    tipos de sushi, nigiri y maki. Todo ello 
+                                    aderezado con salsa de soja y wasabi.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>¿Sirven comida occidental?</h3>
+                            <div class="acordeon-contenido">
+                                <p>
+                                    Si alguno de sus invitados no gusta de la comida
+                                    japonesa disponemos de varios platos que
+                                    seguro gustarán a cualquier tipo de comensal
+                                    como la aleta de tiburón o distintos tipos de 
+                                    arroz.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
         </article>
 
         <!-- JQuery -->
@@ -129,9 +198,9 @@
             $(document).ready(function() {
                 $('#slider').nivoSlider();
 
-                var sections = ["slideshow", "polaroid", "contacto", "mapa"];
+                var sections = ["slideshow", "polaroid", "contacto", "mapa", "faq"];
 
-                showSection("slideshow", sections);
+                showSection("faq", sections);
 
                 for (var i in sections) {
                     var $link = $("#" + sections[i] + "-link");
@@ -139,7 +208,6 @@
                         e.preventDefault();
                         var clicked = this.id.slice(0, -5);
                         showSection(clicked, sections);
-                        $(this).parent("ul").parent("li").css("background-color", "#C3632D");
                     });
                 }
 

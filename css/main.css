@@ -39,14 +39,6 @@ body {
     border: 1px solid lightgray;
     border-radius: 5px;
     opacity: .7;
-
-/*    -webkit-column-count: 3;  Chrome, Safari, Opera 
-    -moz-column-count: 3;  Firefox 
-    column-count: 3;*/
-}
-
-.text-frame hr {
-    width: 500px;
 }
 
 .text-frame h3 {
@@ -56,4 +48,13 @@ body {
 
 .text-frame p {
     margin-top: 1.5em;
+}
+
+/* Estilo de enlaces */
+.text-frame a {
+    color: #C02416;    
+}
+
+.text-frame a:visited {
+    color: #C02416;
 }

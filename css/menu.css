@@ -27,7 +27,7 @@ nav ul {
     background-color: #000000; 
     list-style: none;
     position: relative;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
     display: inline-table;
 }
