@@ -48,7 +48,6 @@
 
                 <div class="text-frame">
                     <h3>Algunos de nuestros rincones</h3>
-                    <hr>
                     <p>
                         La decoración de nuestro local está absolutamente ambientada
                         en nuestra cultura y costumbres, por lo que podemos garantizar,
@@ -69,7 +68,6 @@
 
                 <div class="text-frame">
                     <h3>Algunos de nuestros rincones</h3>
-                    <hr>
                     <p>
                         La decoración de nuestro local está absolutamente ambientada
                         en nuestra cultura y costumbres, por lo que podemos garantizar,
@@ -99,7 +97,6 @@
 
                 <div class="text-frame">
                     <h3>Póngase en contacto con nosotros</h3>
-                    <hr>
                     <p>
                         Si tiene alguna pregunta no dude en ponerse en contacto con
                         nosotros, le atenderemos en cuanto sea posible.
@@ -117,9 +114,9 @@
                 </div>
 
             </section>
-            
+
             <section id="mapa-section">
-                
+
             </section>
 
         </article>
@@ -132,12 +129,7 @@
             $(document).ready(function() {
                 $('#slider').nivoSlider();
 
-                var sections = {
-                    1: "slideshow",
-                    2: "polaroid",
-                    3: "contacto",
-                    4: "mapa"
-                };
+                var sections = ["slideshow", "polaroid", "contacto", "mapa"];
 
                 showSection("slideshow", sections);
 
@@ -147,22 +139,22 @@
                         e.preventDefault();
                         var clicked = this.id.slice(0, -5);
                         showSection(clicked, sections);
+                        $(this).parent("ul").parent("li").css("background-color", "#C3632D");
                     });
                 }
 
                 function showSection(visibleSection, sectionsArray) {
                     var section;
-                
+
                     for (var i in sectionsArray) {
                         section = document.getElementById(sectionsArray[i] + "-section");
-                        console.log(section);
 
                         if (sectionsArray[i] !== visibleSection)
                             section.style.display = "none";
                         else
                             section.style.display = "block";
                     }
-                    
+
                 }
 
             });

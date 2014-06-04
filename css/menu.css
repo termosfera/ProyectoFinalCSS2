@@ -10,6 +10,10 @@
 }
 
 nav {
+    width: 1000px;
+    margin-top: .5em;
+    margin-right: auto;
+    margin-left: auto;
     opacity: .7;
     z-index: 20;
 }
@@ -24,6 +28,7 @@ nav ul {
     box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
     list-style: none;
     position: relative;
+    border-radius: 5px;
     display: inline-table;
 }
 

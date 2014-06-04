@@ -31,15 +31,13 @@ body {
     color: white;
     width: 675px;
     height: 200px;
-    text-align: center;
-    padding: .5em;
     padding-right: 1em;
     padding-left: 1em;
     margin-right: auto;
     margin-left: auto;
     background-color: black;
     border: 1px solid lightgray;
-    border-radius: 8px;
+    border-radius: 5px;
     opacity: .7;
 
 /*    -webkit-column-count: 3;  Chrome, Safari, Opera 
@@ -53,7 +51,6 @@ body {
 
 .text-frame h3 {
     color: #C3632D;
-    text-align: center;
     font-size: 25px;
 }
 
