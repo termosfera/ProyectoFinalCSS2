@@ -1,0 +1,47 @@
+#mapa-section {
+    width: 700px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid black;
+}
+
+#mapa-frame {
+    width: 350px;
+    height: 500px;
+    margin: 1em;
+    display: block;
+    float: left;
+    border: 1px solid black;
+    background-image: url("./../img/optimized/map.jpg");
+    background-repeat: no-repeat;
+}
+
+#mapa-tablero {
+    width: 250px;
+    height: 500px;
+    margin: 1em;
+    display: block;
+    float: left;
+    border: 1px solid black;
+}
+
+.restaurante {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.restaurante #restaurante1 {
+    
+}
+
+.restaurante #restaurante2 {
+    
+}
+
+.restaurante #restaurante3 {
+    
+}
+

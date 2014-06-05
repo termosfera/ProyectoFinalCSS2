@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="./css/acordeon.css">
         <link rel="stylesheet" type="text/css" href="./css/slideshow.css">
         <link rel="stylesheet" type="text/css" href="./css/contacto.css">
+        <link rel="stylesheet" type="text/css" href="./css/mapa.css">
 
         <!-- Nivo Slider plugin style -->
         <link rel="stylesheet" href="./lib/nivo-slider/themes/default/default.css" type="text/css" media="screen">
@@ -56,10 +57,10 @@
                 </div>
 
                 <div id="polaroid">
-                    <img class="pic one" src="./img/1.jpg" alt="">
-                    <img class="pic two" src="./img/2.jpg" alt="">
-                    <img class="pic three" src="./img/3.jpg" alt="">
-                    <img class="pic four" src="./img/4.jpg" alt="">  
+                    <img id="foto1" class="foto" src="./img/1.jpg" alt="">
+                    <img id="foto2" class="foto" src="./img/2.jpg" alt="">
+                    <img id="foto3" class="foto" src="./img/3.jpg" alt="">
+                    <img id="foto4" class="foto" src="./img/4.jpg" alt="">  
                 </div>
 
             </section>
@@ -85,7 +86,7 @@
                             <img src="./img/4.jpg" alt="" title="#fourthcaption">
                         </div>
                     </div>
-                    
+
                     <div id="firstcaption" class="nivo-html-caption">
                         <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
                     </div>
@@ -125,7 +126,36 @@
 
             </section>
 
-            <section id="mapa-section">
+            <section id="mapa-section">                
+
+                <div class="text-frame">
+                    <h3>Localización de nuestros restaurantes</h3>
+                    <p>
+                        Visita nuestros restaurantes.
+                    </p>
+                </div>
+
+                <div id="mapa-frame">
+
+                    <div id="mapa">
+
+                        <div class="restaurante" id="restaurante1">
+
+                        </div>
+                        <div class="restaurante" id="restaurante2">
+
+                        </div>
+                        <div class="restaurante" id="restaurante3">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="mapa-tablero">
+
+                </div>
 
             </section>
 
@@ -201,19 +231,19 @@
         </article>
 
         <!-- JQuery -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./lib/jq/jquery-2.1.1.min.js"></script>
         <!-- Nivo Slider plugin -->
         <script type="text/javascript" src="./lib/nivo-slider/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#slider').nivoSlider();
-
                 var sections = ["slideshow", "polaroid", "contacto", "mapa", "faq"];
 
-                showSection("contacto", sections);
+                showSection("polaroid", sections);
 
                 for (var i in sections) {
                     var $link = $("#" + sections[i] + "-link");
+
                     $link.click(function(e) {
                         e.preventDefault();
                         var clicked = this.id.slice(0, -5);
@@ -229,8 +259,9 @@
 
                         if (sectionsArray[i] !== visibleSection)
                             section.style.display = "none";
-                        else
+                        else {                                
                             section.style.display = "block";
+                        }
                     }
 
                 }
