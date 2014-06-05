@@ -57,10 +57,10 @@
                 </div>
 
                 <div id="polaroid">
-                    <img id="foto1" class="foto" src="./img/1.jpg" alt="">
-                    <img id="foto2" class="foto" src="./img/2.jpg" alt="">
-                    <img id="foto3" class="foto" src="./img/3.jpg" alt="">
-                    <img id="foto4" class="foto" src="./img/4.jpg" alt="">  
+                    <img id="foto1" class="foto" src="./img/optimized/polaroid/1.jpg" alt="">
+                    <img id="foto2" class="foto" src="./img/optimized/polaroid/2.jpg" alt="">
+                    <img id="foto3" class="foto" src="./img/optimized/polaroid/3.jpg" alt="">
+                    <img id="foto4" class="foto" src="./img/optimized/polaroid/4.jpg" alt="">  
                 </div>
 
             </section>
@@ -80,7 +80,7 @@
 
                     <div class="slider-wrapper theme-default">
                         <div id="slider" class="nivoSlider">
-                            <img src="./img/1.jpg" alt="" title="#firstcaption">
+                            <img src="./img/1.jpg" alt="Chef" title="#firstcaption">
                             <img src="./img/2.jpg" alt="" title="#secondcaption">
                             <img src="./img/3.jpg" alt="" title="#thirdcaption">
                             <img src="./img/4.jpg" alt="" title="#fourthcaption">
@@ -88,16 +88,16 @@
                     </div>
 
                     <div id="firstcaption" class="nivo-html-caption">
-                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                        <p>Nuestro chef maestro, <strong>Nagasaki Matsumoto</strong>.</p>
                     </div>
                     <div id="secondcaption" class="nivo-html-caption">
-                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                        <p>Local agradable con todas las comodidades.</p>
                     </div>
                     <div id="thirdcaption" class="nivo-html-caption">
-                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                        <p>Nuestros empleados le darán el trato mas servicial.</p>
                     </div>
                     <div id="fourthcaption" class="nivo-html-caption">
-                        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="">a link</a>
+                        <p>Pruebe la especialidad de la casa, nuestro <strong>sushi</strong></p>
                     </div>
 
                 </div>
@@ -210,6 +210,7 @@
                                     tipos de sushi, nigiri y maki. Todo ello 
                                     aderezado con salsa de soja y wasabi.
                                 </p>
+                                <img src="./img/recomendado.jpg" alt="plato recomendado">
                             </div>
                         </li>
                         <li>
@@ -239,7 +240,7 @@
                 $('#slider').nivoSlider();
                 var sections = ["slideshow", "polaroid", "contacto", "mapa", "faq"];
 
-                showSection("polaroid", sections);
+                showSection("slideshow", sections);
 
                 for (var i in sections) {
                     var $link = $("#" + sections[i] + "-link");
