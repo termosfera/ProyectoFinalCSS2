@@ -24,7 +24,7 @@
     <body>
 
         <nav class="menu">
-            <ul>
+            <ul id="main-bar">
                 <li><img id="logo" alt="logo" src="./img/letter-nav.png"></li>
                 <li><a href="">Home</a></li>
                 <li><a href="">Galerias</a>
@@ -43,10 +43,9 @@
             </ul>
         </nav>
 
-        <article class="main">	
-
-            <section id="polaroid-section">	
-
+        <article class="main">
+            
+            <section id="polaroid-section">
                 <div class="text-frame">
                     <h3>Algunos de nuestros rincones</h3>
                     <p>
@@ -62,11 +61,9 @@
                     <img id="foto3" class="foto" src="./img/optimized/polaroid/3.jpg" alt="">
                     <img id="foto4" class="foto" src="./img/optimized/polaroid/4.jpg" alt="">  
                 </div>
-
             </section>
 
-            <section id="slideshow-section">	
-
+            <section id="slideshow-section">
                 <div class="text-frame">
                     <h3>Algunos de nuestros rincones</h3>
                     <p>
@@ -101,11 +98,9 @@
                     </div>
 
                 </div>
-
             </section>
 
-            <section id="contacto-section">	
-
+            <section id="contacto-section">
                 <div class="text-frame">
                     <h3>Póngase en contacto con nosotros</h3>
                     <p>
@@ -123,15 +118,15 @@
                         <button class="boton" type="submit">Enviar - 送信</button>
                     </form>
                 </div>
-
             </section>
 
-            <section id="mapa-section">                
-
+            <section id="mapa-section">        
                 <div class="text-frame">
                     <h3>Localización de nuestros restaurantes</h3>
                     <p>
-                        Visita nuestros restaurantes.
+                        Visita nuestros restaurantes, nuestra franquicia cuenta
+                        con cuatro restaurantes que harán las delicias de los
+                        amantes del buen sushi y la gastronomía japonesa.
                     </p>
                 </div>
 
@@ -167,21 +162,15 @@
                     </div>
 
                 </div>
-
-                <div id="mapa-tablero">
-
-                </div>
-
             </section>
 
             <section id="faq-section">
-
                 <div class="text-frame">
                     <h3>Preguntas comunes</h3>
                     <p>
                         Estas son algunas de las dudas mas comunes entre nuestros
                         clientes, si tiene alguna mas no dude en enviárnosla a
-                        nuestro formulario de <a href="">contacto.</a>
+                        nuestro formulario de <a id="toContact-link" href="">contacto.</a>
                     </p>
                 </div>
 
@@ -252,35 +241,84 @@
         <script type="text/javascript" src="./lib/nivo-slider/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#slider').nivoSlider();
-                var sections = ["slideshow", "polaroid", "contacto", "mapa", "faq"];
+                $('#slider').nivoSlider();              
+                                
+                hideSections();
+                
+                $("#slideshow-section").css("display", "block");
 
-                showSection("mapa", sections);
-
-                for (var i in sections) {
-                    var $link = $("#" + sections[i] + "-link");
-
-                    $link.click(function(e) {
-                        e.preventDefault();
-                        var clicked = this.id.slice(0, -5);
-                        showSection(clicked, sections);
-                    });
+                $("#slideshow-link").click(function(e) {
+                    e.preventDefault();
+                    hideSections();
+                    var sectionToShow = "#" + this.id.slice(0, -5) + "-section";
+                    $(sectionToShow).css("display", "block");
+                });
+                
+                $("#polaroid-link").click(function(e) {
+                    e.preventDefault();
+                    hideSections();
+                    var sectionToShow = "#" + this.id.slice(0, -5) + "-section";
+                    $(sectionToShow).css("display", "block");                    
+                });
+                
+                $("#contacto-link").click(function(e) {
+                    e.preventDefault();
+                    hideSections();
+                    var sectionToShow = "#" + this.id.slice(0, -5) + "-section";
+                    $(sectionToShow).css("display", "block");                    
+                });
+                
+                $("#mapa-link").click(function(e) {
+                    e.preventDefault();
+                    hideSections();
+                    var sectionToShow = "#" + this.id.slice(0, -5) + "-section";
+                    $(sectionToShow).css("display", "block");                    
+                });
+                
+                $("#faq-link").click(function(e) {
+                    e.preventDefault();
+                    hideSections();
+                    var sectionToShow = "#" + this.id.slice(0, -5) + "-section";
+                    $(sectionToShow).css("display", "block");                    
+                });
+                
+                $("#toContact-link").click(function(e) {
+                    e.preventDefault();
+                    hideSections();
+                    $("#contacto-section").css("display", "block");
+                });
+                
+                function hideSections() {
+                    $("section").css("display", "none");
                 }
 
-                function showSection(visibleSection, sectionsArray) {
-                    var section;
-
-                    for (var i in sectionsArray) {
-                        section = document.getElementById(sectionsArray[i] + "-section");
-
-                        if (sectionsArray[i] !== visibleSection)
-                            section.style.display = "none";
-                        else {                                
-                            section.style.display = "block";
-                        }
-                    }
-
-                }
+//                var sections = ["slideshow", "polaroid", "contacto", "mapa", "faq"];
+//
+//                showSection("slideshow", sections);
+//
+//                for (var i in sections) {
+//                    var $link = $("#" + sections[i] + "-link");
+//
+//                    $link.click(function(e) {
+//                        e.preventDefault();
+//                        var clicked = this.id.slice(0, -5);
+//                        showSection(clicked, sections);
+//                    });
+//                }
+//
+//                function showSection(visibleSection, sectionsArray) {
+//                    var section;
+//
+//                    for (var i in sectionsArray) {
+//                        section = document.getElementById(sectionsArray[i] + "-section");
+//
+//                        if (sectionsArray[i] !== visibleSection)
+//                            section.style.display = "none";
+//                        else {                                
+//                            section.style.display = "block";
+//                        }
+//                    }
+//                }
 
             });
         </script>

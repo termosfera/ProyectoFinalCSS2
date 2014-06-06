@@ -4,10 +4,6 @@
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-/*    background-image: url('./../img/optimized/letter.jpg');
-    background-repeat: no-repeat;
-    border: 1px solid #888;
-    box-shadow:2px 2px 2px #888 inset;*/
     background-color: black;
     opacity: .7;
 }
@@ -29,6 +25,24 @@
     font-weight: bold;
     padding: .2em;
     margin-top: 15px;
+    
+    /* Estilo inputs */
+    border: 1px solid white; 
+    padding: .5em;
+    background: rgba(255,255,255,0.9);
+    margin: 0 0 10px 0;
+    
+    /* Color de linea de evento focus */
+    outline-color: #C3632D;
+}
+
+/* Placeholder de inputs */
+.campo::-webkit-input-placeholder {
+    color: #C3632D;
+}
+
+.campo:focus {
+    border: 1px solid #C3632D; 
 }
 
 input {
@@ -37,8 +51,11 @@ input {
 
 textarea {
     height: 180px;
+    /* Impedimos redimensionado de textarea */
+    resize: none;
 }
 
 .boton {
+    font-weight: bold;
     margin-top: 25px;
 }
