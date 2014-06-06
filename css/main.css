@@ -14,13 +14,11 @@ body {
     background-color: #ececec;
 }
 
-.main {
-    width: 1000px;
+#container {
+    width: 960px;
     height: 800px;
     padding-top: 2.5em;
-    margin-top: 2em;;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto 0 auto;
     background-image: url('./../img/optimized/sushi-body.jpg');
     background-repeat: no-repeat;
     border-radius: 3px;
@@ -31,11 +29,9 @@ body {
     color: white;
     width: 668px;
     height: 200px;
-    padding-right: 1em;
-    padding-left: 1em;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: black;
+    padding: 0 1em 0 1em;
+    margin: 0 auto 0 auto;
+    background-color: #000;
     border: 1px solid lightgray;
     opacity: .7;
 }
@@ -54,6 +50,6 @@ body {
     color: #C3632D;    
 }
 
-.text-frame a:visited {
-    /*color: #C02416;*/
+.text-frame a {
+    color: #C02416;
 }

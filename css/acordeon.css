@@ -25,23 +25,22 @@
     transition: height .5s ease-in-out;
 }
 
+/* Cambiamos la altura de elementos le al hacer hover. 
+   Efecto clave para el funcionamiento del acordeon. */
 #acordeon ul li:hover {
     height: 200px;
 }
 
-#acordeon ul li h3 {
+#acordeon h3 {
     color: #C3632D;
     height: 25px;
     padding-left: 1em;
-    -webkit-transform-origin: 0 100%;
 }
 
 .acordeon-contenido {
     height: 150px;
     background-color: rgb(255, 255, 255);
-    padding-top: .5em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: .5em 1em 1em;
     border-top: 1px solid black;
 }
 
@@ -55,8 +54,4 @@
     float: left;
     margin: .5em;
     border-radius: 3px;
-}
-
-#acordeon div {
-
 }
