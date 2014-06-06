@@ -1,3 +1,5 @@
+#contacto-section {}
+
 #form-frame {
     width: 700px;
     height: 500px;
@@ -19,24 +21,23 @@
     display: block;
 }
 
+/* Estilo de los campos */
 .campo {
     width: 300px;
     font-size: 15px;
     font-weight: bold;
-    padding: .2em;
+    padding: .5em;
     margin-top: 15px;
     
-    /* Estilo inputs */
     border: 1px solid white; 
-    padding: .5em;
-    background: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     margin: 0 0 10px 0;
     
     /* Color de linea de evento focus */
     outline-color: #C3632D;
 }
 
-/* Placeholder de inputs */
+/* Estilo placeholder de los campos */
 .campo::-webkit-input-placeholder {
     color: #C3632D;
 }
@@ -55,7 +56,10 @@ textarea {
     resize: none;
 }
 
-.boton {
+button {
     font-weight: bold;
-    margin-top: 25px;
+    padding: .4em;
+    margin-top: 15px;
+    border-radius: 3px;
+    border: 1px solid black;
 }
